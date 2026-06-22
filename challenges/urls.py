@@ -2,6 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("january", views.January),
-    path("february", views.February)
+    path("<int:month>", views.Monthly_challenge_by_number),
+    path("<str:month>", views.Monthly_challenge)
 ]
